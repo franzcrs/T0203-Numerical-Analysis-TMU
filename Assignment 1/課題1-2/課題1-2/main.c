@@ -14,10 +14,13 @@
 double matrix_inf_norm(double a[3][3]){
     double max = 0;
     double sum_per_row[3] = {0};
-    for(char i = 0; i<3; i++){
-        for(char j = 0; j<3; j++){
+    for (char i = 0; i<3; i++){
+        for (char j = 0; j<3; j++){
+            if (a[i][j] < 0){
+                a[i][j] = a[i][j] * (-1);
+            }
             sum_per_row[i] = sum_per_row[i] + a[i][j];
-            if(i==0){
+            if (i==0){
                 max = sum_per_row[i];
             }
             else if (sum_per_row[i]>max){
