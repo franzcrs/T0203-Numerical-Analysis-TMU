@@ -10,7 +10,7 @@
 //  
 
 #include <iostream>
-#include "complexClass.h"
+#include "complex.h"
 
 int main() {
     std::cout <<
